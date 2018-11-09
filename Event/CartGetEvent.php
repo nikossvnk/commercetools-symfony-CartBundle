@@ -1,6 +1,5 @@
 <?php
 /**
- *
  */
 
 namespace Commercetools\Symfony\CartBundle\Event;
