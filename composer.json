@@ -1,0 +1,15 @@
+{
+    "name": "commercetools/symfony-CartBundle",
+    "description": "Symfony CartBundle for Commercetools platform",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Commercetools\\Symfony\\CartBundle\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "commercetools/symfony-CtpBundle": "^2.5"
+    }
+}
