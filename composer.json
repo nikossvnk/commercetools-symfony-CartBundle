@@ -1,5 +1,5 @@
 {
-    "name": "commercetools/symfony-CartBundle",
+    "name": "commercetools/symfony-cart-bundle",
     "description": "Symfony CartBundle for Commercetools platform",
     "type": "library",
     "license": "MIT",
