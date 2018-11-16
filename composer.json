@@ -14,7 +14,7 @@
         }
     },
     "require": {
-        "commercetools/symfony-ctp-bundle": "dev-master",
-        "commercetools/symfony-catalog-bundle": "*"
+        "commercetools/symfony-ctp-bundle": "self.version",
+        "commercetools/symfony-catalog-bundle": "self.version"
     }
 }
