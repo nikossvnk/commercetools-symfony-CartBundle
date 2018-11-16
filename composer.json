@@ -14,7 +14,12 @@
         }
     },
     "require": {
-        "commercetools/symfony-ctp-bundle": "self.version",
-        "commercetools/symfony-catalog-bundle": "self.version"
+        "commercetools/symfony-ctp-bundle": "^0.3",
+        "commercetools/symfony-catalog-bundle": "^0.3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3.0-dev"
+        }
     }
 }
