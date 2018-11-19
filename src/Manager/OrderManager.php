@@ -44,7 +44,7 @@ class OrderManager
     /**
      * @param $locale
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return OrderCollection
      */
     public function getOrdersForUser($locale, CtpUser $user = null, $anonymousId = null)
@@ -56,7 +56,7 @@ class OrderManager
      * @param $locale
      * @param $orderId
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return Order
      */
     public function getOrderForUser($locale, $orderId, CtpUser $user = null, $anonymousId = null)
@@ -68,7 +68,7 @@ class OrderManager
      * @param $locale
      * @param $paymentId
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return mixed
      */
     public function getOrderFromPayment($locale, $paymentId, CtpUser $user = null, $anonymousId = null)
@@ -107,7 +107,7 @@ class OrderManager
     /**
      * @param Order $order
      * @param AbstractAction $action
-     * @param null $eventName
+     * @param string|null $eventName
      * @return AbstractAction[]
      */
     public function dispatch(Order $order, AbstractAction $action, $eventName = null)
