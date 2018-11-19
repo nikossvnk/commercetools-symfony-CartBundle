@@ -46,7 +46,7 @@ class CartManager
      * @param $locale
      * @param null $cartId
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return Cart|null
      */
     public function getCart($locale, $cartId = null, CtpUser $user = null, $anonymousId = null)
@@ -63,8 +63,8 @@ class CartManager
      * @param $currency
      * @param Location $location
      * @param LineItemDraftCollection|null $lineItemDraftCollection
-     * @param null $customerId
-     * @param null $anonymousId
+     * @param string|null $customerId
+     * @param string|null $anonymousId
      * @return Cart|null
      */
     public function createCart($locale, $currency, Location $location, LineItemDraftCollection $lineItemDraftCollection = null, $customerId = null, $anonymousId = null)
