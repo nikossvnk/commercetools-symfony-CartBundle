@@ -77,7 +77,7 @@ class PaymentManager
      * @param $locale
      * @param Money $amountPlanned
      * @param CustomerReference|null $customerReference
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @param PaymentStatus|null $paymentStatus
      * @return Payment
      */
