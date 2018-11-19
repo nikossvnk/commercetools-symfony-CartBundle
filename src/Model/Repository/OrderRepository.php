@@ -20,7 +20,7 @@ class OrderRepository extends Repository
     /**
      * @param $locale
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return OrderCollection
      */
     public function getOrders($locale, CtpUser $user = null, $anonymousId = null)
@@ -43,7 +43,7 @@ class OrderRepository extends Repository
      * @param $locale
      * @param $orderId
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return Order
      */
     public function getOrder($locale, $orderId, CtpUser $user = null, $anonymousId = null)
@@ -67,7 +67,7 @@ class OrderRepository extends Repository
      * @param $locale
      * @param $paymentId
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return mixed
      */
     public function getOrderFromPayment($locale, $paymentId, CtpUser $user = null, $anonymousId = null)
@@ -93,7 +93,7 @@ class OrderRepository extends Repository
     /**
      * @param $locale
      * @param Cart $cart
-     * @param StateReference $stateReference
+     * @param StateReference|null $stateReference
      * @return Order
      */
     public function createOrderFromCart($locale, Cart $cart, StateReference $stateReference = null)

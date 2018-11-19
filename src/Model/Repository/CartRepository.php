@@ -25,9 +25,9 @@ class CartRepository extends Repository
 
     /**
      * @param $locale
-     * @param null $cartId
+     * @param string|null $cartId
      * @param CtpUser|null $user
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @return mixed
      */
     public function getCart($locale, $cartId = null, CtpUser $user = null, $anonymousId = null)

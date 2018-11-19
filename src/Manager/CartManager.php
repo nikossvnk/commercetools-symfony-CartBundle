@@ -44,7 +44,7 @@ class CartManager
 
     /**
      * @param $locale
-     * @param null $cartId
+     * @param string|null $cartId
      * @param CtpUser|null $user
      * @param string|null $anonymousId
      * @return Cart|null
