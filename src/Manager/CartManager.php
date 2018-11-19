@@ -74,8 +74,10 @@ class CartManager
 
         $cart = $this->repository->createCart($locale, $currency, $location, $lineItemDraftCollection, $customerId, $anonymousId);
 
-        $eventPost = new CartPostCreateEvent($cart);
-        $this->dispatcher->dispatch(CartPostCreateEvent::class, $eventPost);
+        if (!is_null($cart)) {
+            $eventPost = new CartPostCreateEvent($cart);
+            $this->dispatcher->dispatch(CartPostCreateEvent::class, $eventPost);
+        }
 
         return $cart;
     }
