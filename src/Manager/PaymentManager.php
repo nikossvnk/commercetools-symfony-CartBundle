@@ -17,7 +17,6 @@ use Commercetools\Symfony\CartBundle\Event\PaymentUpdateEvent;
 use Commercetools\Symfony\CartBundle\Model\PaymentUpdateBuilder;
 use Commercetools\Symfony\CartBundle\Model\Repository\PaymentRepository;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 class PaymentManager
 {

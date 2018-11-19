@@ -15,7 +15,7 @@ use Commercetools\Core\Model\Cart\Cart;
 use Commercetools\Core\Model\Cart\CartDraft;
 use Commercetools\Core\Model\Cart\LineItemDraftCollection;
 use Commercetools\Core\Model\Common\Address;
-use Symfony\Component\Security\Core\User\UserInterface;
+use Commercetools\Symfony\CtpBundle\Security\User\CtpUser;
 
 
 class CartRepository extends Repository
@@ -26,11 +26,11 @@ class CartRepository extends Repository
     /**
      * @param $locale
      * @param null $cartId
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return mixed
      */
-    public function getCart($locale, $cartId = null, UserInterface $user = null, $anonymousId = null)
+    public function getCart($locale, $cartId = null, CtpUser $user = null, $anonymousId = null)
     {
         $cartRequest = RequestBuilder::of()->carts()->query();
 

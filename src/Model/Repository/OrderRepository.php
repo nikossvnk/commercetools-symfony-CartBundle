@@ -13,17 +13,17 @@ use Commercetools\Core\Model\Order\OrderCollection;
 use Commercetools\Core\Model\State\StateReference;
 use Commercetools\Symfony\CtpBundle\Model\QueryParams;
 use Commercetools\Symfony\CtpBundle\Model\Repository;
-use Symfony\Component\Security\Core\User\UserInterface;
+use Commercetools\Symfony\CtpBundle\Security\User\CtpUser;
 
 class OrderRepository extends Repository
 {
     /**
      * @param $locale
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return OrderCollection
      */
-    public function getOrders($locale, UserInterface $user = null, $anonymousId = null)
+    public function getOrders($locale, CtpUser $user = null, $anonymousId = null)
     {
         $request = RequestBuilder::of()->orders()->query();
 
@@ -42,11 +42,11 @@ class OrderRepository extends Repository
     /**
      * @param $locale
      * @param $orderId
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return Order
      */
-    public function getOrder($locale, $orderId, UserInterface $user = null, $anonymousId = null)
+    public function getOrder($locale, $orderId, CtpUser $user = null, $anonymousId = null)
     {
         $request = RequestBuilder::of()->orders()->query();
 
@@ -66,11 +66,11 @@ class OrderRepository extends Repository
     /**
      * @param $locale
      * @param $paymentId
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return mixed
      */
-    public function getOrderFromPayment($locale, $paymentId, UserInterface $user = null, $anonymousId = null)
+    public function getOrderFromPayment($locale, $paymentId, CtpUser $user = null, $anonymousId = null)
     {
         $request = RequestBuilder::of()->orders()->query();
 

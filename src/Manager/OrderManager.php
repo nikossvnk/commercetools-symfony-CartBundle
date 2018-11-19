@@ -13,10 +13,10 @@ use Commercetools\Symfony\CartBundle\Event\OrderCreateEvent;
 use Commercetools\Symfony\CartBundle\Event\OrderPostCreateEvent;
 use Commercetools\Symfony\CartBundle\Event\OrderPostUpdateEvent;
 use Commercetools\Symfony\CartBundle\Event\OrderUpdateEvent;
+use Commercetools\Symfony\CtpBundle\Security\User\CtpUser;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Commercetools\Symfony\CartBundle\Model\Repository\OrderRepository;
 use Commercetools\Symfony\CartBundle\Model\OrderUpdateBuilder;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 class OrderManager
 {
@@ -43,11 +43,11 @@ class OrderManager
 
     /**
      * @param $locale
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return OrderCollection
      */
-    public function getOrdersForUser($locale, UserInterface $user = null, $anonymousId = null)
+    public function getOrdersForUser($locale, CtpUser $user = null, $anonymousId = null)
     {
         return $this->repository->getOrders($locale, $user, $anonymousId);
     }
@@ -55,11 +55,11 @@ class OrderManager
     /**
      * @param $locale
      * @param $orderId
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return Order
      */
-    public function getOrderForUser($locale, $orderId, UserInterface $user = null, $anonymousId = null)
+    public function getOrderForUser($locale, $orderId, CtpUser $user = null, $anonymousId = null)
     {
         return $this->repository->getOrder($locale, $orderId, $user, $anonymousId);
     }
@@ -67,11 +67,11 @@ class OrderManager
     /**
      * @param $locale
      * @param $paymentId
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return mixed
      */
-    public function getOrderFromPayment($locale, $paymentId, UserInterface $user = null, $anonymousId = null)
+    public function getOrderFromPayment($locale, $paymentId, CtpUser $user = null, $anonymousId = null)
     {
         return $this->repository->getOrderFromPayment($locale, $paymentId, $user, $anonymousId);
     }

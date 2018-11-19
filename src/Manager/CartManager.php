@@ -14,10 +14,10 @@ use Commercetools\Symfony\CartBundle\Event\CartPostCreateEvent;
 use Commercetools\Symfony\CartBundle\Event\CartPostUpdateEvent;
 use Commercetools\Symfony\CartBundle\Event\CartNotFoundEvent;
 use Commercetools\Symfony\CartBundle\Event\CartUpdateEvent;
+use Commercetools\Symfony\CtpBundle\Security\User\CtpUser;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Commercetools\Symfony\CartBundle\Model\Repository\CartRepository;
 use Commercetools\Symfony\CartBundle\Model\CartUpdateBuilder;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 class CartManager
 {
@@ -45,11 +45,11 @@ class CartManager
     /**
      * @param $locale
      * @param null $cartId
-     * @param UserInterface|null $user
+     * @param CtpUser|null $user
      * @param null $anonymousId
      * @return Cart|null
      */
-    public function getCart($locale, $cartId = null, UserInterface $user = null, $anonymousId = null)
+    public function getCart($locale, $cartId = null, CtpUser $user = null, $anonymousId = null)
     {
         $cart = $this->repository->getCart($locale, $cartId, $user, $anonymousId);
 
